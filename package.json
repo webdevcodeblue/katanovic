@@ -8,9 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "install:legacy": "npm install --legacy-peer-deps",
-    "build:github": "next build",
-    "export": "next build",
-    "deploy": "next build && touch out/.nojekyll"
+    "build:github": "next build && node fix-image-paths.js",
+    "export": "next build && node fix-image-paths.js",
+    "deploy": "next build && node fix-image-paths.js && echo '' > out/.nojekyll"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
