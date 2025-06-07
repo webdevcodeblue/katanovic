@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  basePath: '/katanovic',
+  assetPrefix: '/katanovic',
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   distDir: 'out',
